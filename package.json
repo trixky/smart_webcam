@@ -24,6 +24,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-static": "^3.0.2",
 		"@tensorflow-models/coco-ssd": "^2.2.3",
 		"@tensorflow/tfjs": "^4.20.0"
 	}
