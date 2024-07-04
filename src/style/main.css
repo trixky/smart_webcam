@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+::-moz-selection { /* Code for Firefox */
+  color: initial;
+  background: orange;
+}
+
+::selection {
+  color: initial;
+  background: orange;
+}
+
+a {
+  @apply cursor-pointer hover:underline underline-offset-2;
+}
+
+img, button, input, select, textarea{
+  @apply select-none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+    @apply text-5xl;
+}
+
+button {
+  @apply px-2 py-1 bg-neutral-600 text-white hover:bg-neutral-950 duration-200 transition-colors;
+}
