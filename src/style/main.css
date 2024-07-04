@@ -27,5 +27,13 @@ h1 {
 }
 
 button {
-  @apply px-2 py-1 bg-neutral-600 text-white hover:bg-neutral-950 duration-200 transition-colors;
+  @apply px-2 py-1 bg-neutral-600 text-white  duration-300 transition-colors;
+}
+
+button:disabled {
+  @apply cursor-not-allowed bg-neutral-300 hover:bg-neutral-300;
+}
+
+button:not(:disabled):hover {
+  @apply bg-neutral-950;
 }

@@ -4,6 +4,7 @@
   import * as tf from "@tensorflow/tfjs";
   import * as cocoSsd from "@tensorflow-models/coco-ssd";
   import { browser } from "$app/environment";
+  import { fade } from 'svelte/transition';
 
   let webcamAvailable = false;
   let video: any = null;
@@ -23,7 +24,6 @@
       });
 
       if (_webcamAvailable) {
-        alert("webcam is available");
         webcamAvailable = true;
       } else {
         alert("webcam is not available");
@@ -68,7 +68,6 @@
   });
 </script>
 
-
 <!-- ================================================= CONTENT -->
 <p>
   Supercharge your webcam with AI to make it smart thanks to <a
@@ -79,7 +78,7 @@
   The model used is
   <a
     href="https://www.npmjs.com/package/@tensorflow-models/coco-ssd"
-    target="_blank">coco-ssd</a
+    target="_blank"><span class="font-bold">coco-ssd</span></a
   >
   which is a pre-trained model for object detection based on the
   <a href="https://cocodataset.org/" target="_blank"
@@ -115,7 +114,10 @@
         <br class="hidden md:block" />
         Don't forget to allow the access to your webcam.
       </p>
-      <button on:click={startWebcamStreaming}>Activate</button>
+      <button on:click={startWebcamStreaming} disabled={model === null}>Activate</button>
+      {#if model === null}
+        <p out:fade={{duration: 300}}>please wait the model to load...</p>
+      {/if}
     </div>
   {/if}
   {#each currentPredictions as currentPrediction}
