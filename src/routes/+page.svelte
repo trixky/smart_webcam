@@ -72,7 +72,7 @@
 <!-- ================================================= CONTENT -->
 <p>
   Supercharge your webcam with AI to make it smart thanks to <a
-    href="tensorflow.js"
+    href="https://www.tensorflow.org/js"
     ><span class="text-orange-300 font-bold">tensorflow.js</span></a
   >.
   <br class="hidden md:block" />
