@@ -27,13 +27,13 @@ h1 {
 }
 
 button {
-  @apply px-2 py-1 bg-neutral-600 text-white  duration-300 transition-colors;
+  @apply px-2 py-1 !bg-orange-500 opacity-50 text-white  transition-opacity;
 }
 
 button:disabled {
-  @apply cursor-not-allowed bg-neutral-300 hover:bg-neutral-300;
+  @apply cursor-not-allowed !opacity-25;
 }
 
 button:not(:disabled):hover {
-  @apply bg-neutral-950;
+  @apply opacity-100;
 }
